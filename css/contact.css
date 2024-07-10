@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Cormorant Infant', serif, sans-serif;
+  font-size: 16px;
+  --bg-color3: #28b8fb;
+  --bg-color: #00b259;
+  --dark-green: #025d31;
+  --bg-color2: #FFF9E6;
+  --white-color: #fff;
+  --dark-color: #050505;
+  --bright-color: #DAA520;
+  --font-color: #0d6036
+}
+body,html {
+  font-family: "Cormorant Infant", serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color2);
+}
+.btn-mail {
+  font-size: 1.5rem;
+  background-color: #000000; /* 黒の背景色 */
+  border-color: #000000; /* 黒のボーダーカラー */
+  width: 8rem;
+  padding: 0.5rem 1rem; /* パディングを調整 */
+  color: var(--white-color)
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 15px; /* 上部のパディングを追加 */
+  padding-bottom: 15px; /* 下部のパディングを追加 */
+  transition: background-color 0.3s ease-in-out;
+}
+.header.transparent {
+  background-color: transparent; /* 透明な背景 */
+  box-shadow: none; /* 影を除去 */
+}
+.header.white-bg {
+  background-color: #ffffff; /* 白い背景 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+.navbar-nav {
+  display: flex;
+}
+.navbar-nav .nav-link {
+  font-size: 1.3rem;
+}
+.myname {
+  position: relative;
+  font-size: 1.5rem;
+  text-decoration: none; /* Remove default underline */
+  transition: text-decoration 0.3s ease; /* Smooth transition for underline */
+}
+.myname::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--dark-color);
+  transition: width 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.myname:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+}
+.navbar-nav .nav-link {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  transition: text-decoration 0.3s ease; /* Smooth transition for underline */
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--dark-color);
+  transition: width 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+}
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 1s ease-out;
+  visibility: hidden;
+}
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.slide-in-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-visible {
+opacity: 1;
+transform: translateY(0);
+}
+/* Main section styles */
+main {
+  padding: 7rem 0;
+}
+
+.center-msg{
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    padding: 5rem;
+    position: relative;
+    margin-bottom: 10%;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.mail-text {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+.mail-text:hover{
+    color: rgb(1, 1, 168);
+}
+
+.contact-con{
+    padding-top: 3rem;
+}
+
+.contact-title {
+  font-size: 6rem;
+  padding-bottom: 1rem;
+}
+.form-title {
+  font-weight: 600;
+  color: var(--dark-green);  font-size: 2.5rem;
+}
+
+.contact-container {
+  max-width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-header {
+  text-align: center;
+  margin: 3rem 0;
+}
+.form-floating {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-floating input,
+.form-floating textarea {
+  width: 100%;
+  padding: 0.75rem 1.25rem; /* 上下のパディングを調整 */
+  border-radius: 2rem;
+  border: 1px solid #ced4da;
+  outline: none;
+}
+.form-floating label {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 15px;
+  transition: 0.3s ease;
+  pointer-events: none;
+  color: #025d31de;
+}
+.form-floating input:focus + label,
+.form-floating textarea:focus + label,
+.form-floating input:not(:placeholder-shown) + label,
+.form-floating textarea:not(:placeholder-shown) + label {
+  top: -20px;
+  left: 20px;
+  font-size: 14px;
+  color: #025d31de;
+}
+
+.form-control {
+    padding-top: calc(0.75rem + 1px); /* 上下のパディングを調整 */
+    padding-bottom: calc(0.75rem + 1px); /* 上下のパディングを調整 */
+    line-height: 1.5; /* テキストの高さを調整 */
+  }
+  
+  textarea.form-control {
+    padding-top: calc(0.75rem + 1px);
+    padding-bottom: calc(0.75rem + 1px);
+    line-height: 1.5; /* テキストの高さを調整 */
+  }
+.btn-theme {
+  background-color: #00b259;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+.btn-theme:hover {
+  background-color: #00914a;
+}
+
+.photo-container {
+    display: flex;
+    width: 45vw;
+    height: 60dvh;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  .photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+  
+  .photo {
+    width: 100%; /* Large photo width */
+    margin-right: 10px;
+    overflow: hidden;
+    object-fit: cover; 
+    display: inline-block;
+
+  }
+  
+  .photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+  .caption {
+    position: absolute;
+    bottom: -50px;
+    left: 3%;
+    background-color: #ecebe5da;
+    color: #0d6036;
+    padding: 5px;
+    display: block;
+    border-radius: 5px;
+    transition: bottom 0.5s ease;
+  }
+  
+  .photo:hover .image-caption{
+    bottom: 3%;
+  }
+  
+/* footer */
+footer {
+border-top: 1px solid #dee2e6;
+  padding: 0;
+  padding-top: 3rem;
+  font-size: 1.2rem;
+}
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--bg-color);
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #343a40;
+  transition: color 0.2s;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.copy-container {
+  padding-left: 5rem;
+}
+.email-container p {
+  font-size: 1.6rem;
+}
+.email-container a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+.vertical-line {
+  height: 1.5rem;
+  border-left: 2px solid #ccc;
+  margin: 0 1rem;
+}
+
+
+@keyframes slide-in {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+
+@keyframes slide-out {
+  from {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+}
+.u-line{
+    position: relative;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.u-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background-color: var(--dark-color);
+    transition: width 0.3s ease-in-out;
+    transform: scaleX(0); 
+    transform-origin: left; 
+}
+    
+.u-line:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+}
