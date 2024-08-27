@@ -645,3 +645,20 @@ footer {
     width: 100%;
     transform: scaleX(1);
 }
+
+@media (max-width: 800px) {
+
+  .bio {
+    line-height:4rem;
+      font-weight: 600;
+      padding: 0 ;
+  }
+
+  .section2 {
+    align-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    padding-top: 200vw;
+}
+
+}

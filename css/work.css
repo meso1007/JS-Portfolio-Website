@@ -153,6 +153,13 @@ main {
     object-fit: cover;
 }
 
+.app-project {
+    text-align: center;
+    width: 50%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .project-info {
     padding: 2rem;
 }
@@ -316,6 +323,31 @@ footer {
     .project-item img {
         height: auto;
     }
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-item {
+    padding: 0;
+    display: block;
+    align-items: center;
+    border-bottom: 0.02px solid #333;
+}
+.app-project{
+    margin:2rem 0;
+
+}
+
+.project-img {
+    width: 100%;
+    margin:2rem 0;
+}
+
+.project-title {
+    font-size: 4rem;
 }
 
 .slide-in-element {
@@ -351,4 +383,5 @@ transform: translateY(0);
 .u-line:hover::after {
     width: 100%;
     transform: scaleX(1);
+}
 }
