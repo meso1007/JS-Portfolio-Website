@@ -27,13 +27,16 @@ $(document).ready(() => {
   const largePhotos = [
     { src: "../Assets/travel/florence.jpg", caption: "Florence,Italy" },
     { src: "../Assets/travel/polamd2.jpg", caption: "Warsaw,Poland" },
-    { src: "../Assets/travel/vancouver.jpg", caption: "Vancouver,Canada" }
+    { src: "../Assets/travel/vancouver.jpg", caption: "Vancouver,Canada" },
+    { src: "../Assets/travel/shibuya.jpg", caption: "Shibuya,Japan" }
+
   ];
   
   const smallPhotos = [
     { src: "../Assets/travel/fujisawa.jpg", caption: "Fujisawa,Kanagawa" },
     { src: "../Assets/travel/poland.jpg", caption: "Warsaw,Poland" },
-    { src: "../Assets/travel/vienna.jpg", caption: "Vienna,Austria" }
+    { src: "../Assets/travel/vienna.jpg", caption: "Vienna,Austria" },
+    { src: "../Assets/travel/arakawa.jpg", caption: "Arakawa City,Japan" },
   ];
   
   const changePhotos = () => {  

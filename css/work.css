@@ -179,8 +179,12 @@ main {
 .btn-custom {
     background-color: #00b259;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    padding: 1rem 1.8rem;
+    height: 60px;
+    width: 150px;    
     font-size: 1.2rem;
 }
 
@@ -189,6 +193,22 @@ main {
     color: #fff;
 }
 
+.btn-custom2 {
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: none;
+    height: 60px;
+    width: 150px;
+    font-size: 1.2rem;
+}
+
+.btn-custom2:hover {
+    background-color: #054993;
+    color: #fff;
+}
 @media (min-width: 576px) {
 .slider-text {
     font-size: 11rem;

@@ -14,12 +14,11 @@ $(document).ready(() => {
 
   // ランダムな画像とキャプションの表示
   const images = [
-    { src: "../Assets/travel/florence.jpg", caption: "Florence, Italy" },
     { src: "../Assets/travel/polamd2.jpg", caption: "Warsaw, Poland" },
     { src: "../Assets/travel/vancouver.jpg", caption: "Vancouver, Canada" },
-    { src: "../Assets/travel/fujisawa.jpg", caption: "Fujisawa, Kanagawa" },
+    { src: "../Assets/travel/fujisawa.jpg", caption: "Fujisawa, Japan" },
     { src: "../Assets/travel/poland.jpg", caption: "Warsaw, Poland" },
-    { src: "../Assets/travel/vienna.jpg", caption: "Vienna, Austria" }
+    { src: "../Assets/travel/kyoto.jpg", caption: "Kyoto, Japan" },
   ];
 
   const changePhotos = () => {  
