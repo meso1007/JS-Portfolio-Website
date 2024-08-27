@@ -60,6 +60,10 @@ body,html {
     display: flex;
 }
 
+#nav-btn {
+
+}
+
 .navbar-nav .nav-link {
     font-size: 1.3rem;
 }
@@ -658,7 +662,7 @@ footer {
     align-content: center;
     gap: 2rem;
     padding: 2rem;
-    padding-top: 350vw;
+    padding-top: 500vw;
 }
 
 }
